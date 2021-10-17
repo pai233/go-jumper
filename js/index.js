@@ -1,8 +1,5 @@
 $(document).ready(()=>{
     console.log("Running...")
-    let reg = new RegExp(/#(.*)/g);
-    let base64 = reg.exec(window.location.hash)
-    let link = window.atob(base64[1])
     if(window.location.hash===""){
         document.getElementsByClassName("loading-text")[0].innerHTML = "参数错误，将跳转至pai233の小窝<dot>...</dot>"
         setTimeout(()=>{
@@ -10,6 +7,9 @@ $(document).ready(()=>{
         },5000)
         return;
     }
+    let reg = new RegExp(/#(.*)/g);
+    let base64 = reg.exec(window.location.hash)
+    let link = window.atob(base64[1])
     let referrer = document.referrer.split('/')[2];
     referrer = referrer===undefined?"":referrer.split('.')
     if(referrer[referrer.length-2]+'.'+referrer[referrer.length-1]!="pai233.top" || document.referrer===""){
