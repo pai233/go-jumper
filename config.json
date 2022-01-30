@@ -1,0 +1,10 @@
+{
+    "sitename":"pai233の小站",
+    "allowlist": [
+        "pai233.top"
+    ],
+    "backTo": {
+        "url": "https://blog.pai233.top/",
+        "sitename": "pai233の小窝"
+    }
+}
