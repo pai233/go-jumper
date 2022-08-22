@@ -58,7 +58,7 @@ function popUpWarning(config,link){
         cancelButtonText: "取消",
       }).then(function(isConfirm){
         console.log(isConfirm)
-        if (isConfirm) {
+        if (isConfirm.value) {
             console.log('setTimeout')
             setTimeout(function(){
                 window.location.href = link
